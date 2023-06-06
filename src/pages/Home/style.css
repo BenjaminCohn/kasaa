@@ -1,0 +1,26 @@
+/* HOME */
+.banner {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 1.375rem;
+}
+.banner-img {
+	width: 100%;
+	height: 6.9375rem;
+	object-fit: cover;
+	border-radius: 0.625rem;
+	filter: brightness(70%);
+}
+.banner-title {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	top: 50%;
+	left: 1rem;
+	width: 66%;
+	transform: translateY(-50%);
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 100%;
+}

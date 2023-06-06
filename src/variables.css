@@ -1,0 +1,60 @@
+
+/*           VARIABLES             */
+
+/*
+$primary-color: #ff6060;
+
+$font-size: (
+	mobile: 4vw,
+	desktop: 1rem,
+);
+
+$breakpoints: (
+	desktop: 768px,
+);
+
+*/
+
+/*       GENERAL MIXINS            */
+
+
+/* Ceci est un mixin qui sera utilisé pour créer un point d'arrêt pour le bureau. */
+/*
+@mixin desktop-breakpoint {
+	@media screen and (min-width: map-get($breakpoints, desktop)) {
+		@content;
+	}
+}
+
+@mixin no-margin {
+	margin: 0;
+}
+
+
+/* Création d'un filtre qui recolorera l'image à la couleur spécifiée. */
+@mixin recolor($color: #000, $opacity: 1) {
+	$r: calc(red($color) / 255);
+	$g: calc(green($color) / 255);
+	$b: calc(blue($color) / 255);
+	$a: $opacity;
+
+
+    // repli en niveaux de gris si SVG à partir de l'url de données n'est pas pris en charge
+	$lightness: lightness($color);
+	filter: saturate(0%) brightness(0%) invert($lightness) opacity($opacity);
+
+	//Filtre couleur
+	$svg-filter-id: 'recolor';
+	filter: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg">\
+      <filter id="#{$svg-filter-id}" color-interpolation-filters="sRGB">\
+        <feColorMatrix type="matrix" values="\
+          0 0 0 0 #{$r}\
+          0 0 0 0 #{$g}\
+          0 0 0 0 #{$b}\
+          0 0 0 #{$a} 0\
+        "/>\
+      </filter>\
+    </svg>\
+    ##{$svg-filter-id}');
+}
