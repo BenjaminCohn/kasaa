@@ -1,9 +1,10 @@
-.gallery,
-.image {
+.gallery, .image {
 	height: 15.9375rem;
-	@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+	.gallery, .image {
 		height: 25.9375rem;
-	}
+   }
 }
 
 .gallery {
@@ -16,8 +17,7 @@
 	border-radius: 0.625rem;
 }
 
-.right-arrow,
-.left-arrow {
+.right-arrow, .left-arrow {
 	z-index: 1;
 	position: absolute;
 	top: 50%;
@@ -26,36 +26,42 @@
 	cursor: pointer;
 	user-select: none;
 	color: red;
-	@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+	.right-arrow, .left-arrow {
 		top: 9.75rem;
 		width: 2.875rem;
 		height: 5rem;
-	}
+   }
 }
 
 .right-arrow {
 	right: 0.3125rem;
 	transform: rotate(180deg);
-	@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+	.right-arrow {
 		right: 1.5rem;
-	}
+   }
 }
 
 .left-arrow {
 	left: 0.3125rem;
-	@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+	.left-arrow {
 		left: 1.5rem;
-	}
+   }
 }
 
 .slide {
 	transform: scale(0.92);
 	opacity: 0;
 	transition-duration: 1s;
-	&.active {
-		width: 100%;
-		transform: scale(1);
-		opacity: 1;
-		transition-duration: 1s;
-	}
+}
+.slide.active {
+	width: 100%;
+	transform: scale(1);
+	opacity: 1;
+	transition-duration: 1s;
 }
