@@ -1,10 +1,15 @@
-/* THUMB */
 .thumb {
 	position: relative;
 	margin: 0 auto;
 	margin-bottom: 1.25rem;
 	transform: scale(1);
 	transition-duration: 0.5s;
+}
+@media screen and (min-width: 768px) {
+	.thumb {
+		position: static;
+		margin: 0;
+   }
 }
 .thumb:hover {
 	transform: scale(1.05);
@@ -28,14 +33,16 @@
 	line-height: 142.6%;
 }
 @media screen and (min-width: 768px) {
-	.thumb {
+	.thumb-title {
+		bottom: 1.25rem;
+   }
+}
+.thumb, .thumb-cover-wrapper img {
+	height: 15.9375rem;
+}
+@media screen and (min-width: 768px) {
+	.thumb, .thumb-cover-wrapper img {
 		width: 21.25rem;
 		height: 21.25rem;
    }
 }
-/*@media screen and (min-width: 768px) {
-	.thumb{
-		display: none;
-   }
-}
-*/
