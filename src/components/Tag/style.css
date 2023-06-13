@@ -1,5 +1,6 @@
 /* TAG */
 .tag {
+	
 	min-width: 4rem;
 	margin-top: 0.75rem;
 	margin-right: 0.625rem;
@@ -9,6 +10,7 @@
 	font-size: 0.625rem;
 	line-height: 142.6%;
 	text-align: center;
+	background-color: #ff6060;
 	vertical-align: middle;
 }
 

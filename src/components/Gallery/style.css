@@ -1,11 +1,6 @@
 .gallery, .image {
 	height: 15.9375rem;
 }
-@media screen and (min-width: 768px) {
-	.gallery, .image {
-		height: 25.9375rem;
-   }
-}
 
 .gallery {
 	position: relative;
@@ -27,6 +22,13 @@
 	user-select: none;
 	color: red;
 }
+
+@media screen and (min-width: 768px) {
+	.gallery, .image {
+		height: 25.9375rem;
+   }
+}
+
 @media screen and (min-width: 768px) {
 	.right-arrow, .left-arrow {
 		top: 9.75rem;

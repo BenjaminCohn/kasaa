@@ -34,6 +34,12 @@ function Annonce() {
 	}
 
 	const [firstName, lastName] = logement.host.name.split(' ')
+	//cree un paragprahe pour chaque équipement pour liste à puces
+	let mapLogementEquipement = logement.equipments.map((l, index) => (
+		<p className="pEquipementLogement" key={l}>
+		  {logement.equipments[index]}
+		</p>
+	  ));
 
 	return (
 		<section>
@@ -65,10 +71,10 @@ function Annonce() {
 					</div>
 				</div>
 			</div>
-			<div className="description-equipments-wrapper">
+			<div className="AccordionLogement">
 				<Collapse title="Description" content={logement.description} />
-				<Collapse title="Équipements" content={logement.equipments} />
-			</div>
+				<Collapse title="Équipements" content={<div className="equipments">{mapLogementEquipement}</div>} />
+		</div>
 		</section>
 	)
 }

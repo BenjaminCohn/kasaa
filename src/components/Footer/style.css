@@ -9,7 +9,7 @@
 .footer-logo {
 	height: 2.25rem;
 	margin-top: 3.75rem;
-	color: red;
+	filter: brightness(0) invert(1);
 }
 .footer-credit {
 	margin-top: 2.5rem;

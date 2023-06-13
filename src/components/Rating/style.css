@@ -1,8 +1,11 @@
 .star, .star-empty {
+	
 	width: 0.9375rem;
 	height: 0.9375rem;
 	margin-right: 0.3125rem;
 	color: red;
+	
+	
 }
 @media screen and (min-width: 768px) {
 	.star, .star-empty {
@@ -13,4 +16,5 @@
 }
 .star-empty {
 	color: white;
+	
 }

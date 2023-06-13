@@ -20,7 +20,6 @@ function Router() {
 				<Route element={<Blank />}>
 					<Route path="*" element={<Error404 />} />
 				</Route>
-
 			</Routes>
 		</BrowserRouter>
 	)
